@@ -99,7 +99,7 @@ def eval_one_shot_model(config, model, nasbench):
     else:
         raise ValueError('Unknown search space')
 
-    adjacency_matrix = search_space.create_nasbench_adjacency_matrix(parents)
+    adjacency_matrix = search_space.create_nasbench_adjacency_matrix_with_loose_ends(parents)
     # Convert the adjacency matrix in format for nasbench
     adjacency_list = adjacency_matrix.astype(np.int).tolist()
     model_spec = api.ModelSpec(matrix=adjacency_list, ops=node_list)
