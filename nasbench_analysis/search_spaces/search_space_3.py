@@ -5,8 +5,8 @@ from nasbench_analysis.utils import NasbenchWrapper
 
 
 def analysis():
-    search_space_3 = SearchSpace(num_parents_per_node={'0': 0, '1': 1, '2': 1, '3': 2, '4': 2, '5': 3},
-                                 search_space_number=2, num_intermediate_nodes=4)
+    search_space_3 = SearchSpace(num_parents_per_node={'0': 0, '1': 1, '2': 1, '3': 1, '4': 2, '5': 2, '6': 2},
+                                 search_space_number=3, num_intermediate_nodes=5)
 
     # Load NASBench
     nasbench = NasbenchWrapper('/home/siemsj/projects/darts_weight_sharing_analysis/nasbench_full.tfrecord')
